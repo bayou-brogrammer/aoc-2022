@@ -1,0 +1,8 @@
+[package]
+edition = "2021"
+name    = "day4"
+version = "0.1.0"
+
+[dependencies]
+nom         = "7"
+range_check = "0.2"
