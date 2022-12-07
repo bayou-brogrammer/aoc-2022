@@ -20,8 +20,9 @@ fn main() {
         3 => day3::day3(input_file),
         4 => day4::day4(input_file),
         5 => day5::day5(input_file),
-        day => println!("Day {} not implemented yet", day),
+        6 => day6::day6(input_file),
+        day => println!("Day {day} not implemented yet"),
     }
 }
 
-fn generate_input_path(day: u8) -> String { format!("./day{}/{}", day, INPUT_FILE) }
+fn generate_input_path(day: u8) -> String { format!("./day{day}/{INPUT_FILE}") }
