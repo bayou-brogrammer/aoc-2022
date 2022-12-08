@@ -4,6 +4,9 @@ use std::{
     path::Path,
 };
 
+mod direction;
+pub use direction::*;
+
 pub const INPUT_FILE: &str = "input.txt";
 
 pub fn read_lines<P: AsRef<Path>>(path: P) -> anyhow::Result<Lines<BufReader<File>>> {
