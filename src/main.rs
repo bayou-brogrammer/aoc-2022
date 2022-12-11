@@ -23,6 +23,9 @@ fn main() {
         6 => day6::day6(input_file),
         7 => day7::day7(input_file),
         8 => day8::day8(input_file),
+        9 => day9::day9(input_file),
+        10 => day10::day10(input_file),
+        11 => day11::day11(input_file),
         day => println!("Day {day} not implemented yet"),
     }
 }

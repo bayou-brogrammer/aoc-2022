@@ -6,6 +6,8 @@ use std::{
 
 mod direction;
 pub use direction::*;
+mod gridpoint;
+pub use gridpoint::*;
 
 pub const INPUT_FILE: &str = "input.txt";
 

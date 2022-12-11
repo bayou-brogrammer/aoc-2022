@@ -87,22 +87,7 @@ fn part2(input: &str) -> String {
         .to_string()
 }
 
-#[derive(Debug, Clone, Copy)]
-pub struct GridPoint {
-    pub x: i32,
-    pub y: i32,
-}
 
-impl std::ops::Add<(i32, i32)> for GridPoint {
-    type Output = Self;
-
-    fn add(self, rhs: (i32, i32)) -> Self::Output {
-        Self {
-            x: self.x + rhs.0,
-            y: self.y + rhs.1,
-        }
-    }
-}
 
 pub struct DirectionIterator {
     size: (i32, i32),
