@@ -25,6 +25,17 @@ impl GridPoint {
     pub fn max_element(self) -> i32 { self.x.max(self.y) }
 }
 
+impl std::ops::Add<GridPoint> for GridPoint {
+    type Output = Self;
+
+    fn add(self, rhs: GridPoint) -> Self::Output {
+        Self {
+            x: self.x + rhs.x,
+            y: self.y + rhs.y,
+        }
+    }
+}
+
 impl std::ops::Add<(i32, i32)> for GridPoint {
     type Output = Self;
 
