@@ -1,0 +1,11 @@
+[package]
+edition = "2021"
+name    = "day12"
+version = "0.1.0"
+
+[dependencies]
+common      = { workspace = true }
+itertools   = "0.10"
+nom         = { workspace = true }
+pathfinding = "4"
+petgraph    = "0.6"

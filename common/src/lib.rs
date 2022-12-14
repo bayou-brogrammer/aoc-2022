@@ -8,6 +8,8 @@ mod direction;
 pub use direction::*;
 mod gridpoint;
 pub use gridpoint::*;
+mod helpers;
+pub use helpers::*;
 
 pub const INPUT_FILE: &str = "input.txt";
 

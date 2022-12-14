@@ -8,6 +8,21 @@ pub struct GridPoint {
 
 impl GridPoint {
     pub fn new(x: i32, y: i32) -> Self { Self { x, y } }
+
+    /// Returns a vector containing the absolute value of each element of `self`.
+    #[inline]
+    pub fn abs(self) -> Self {
+        Self {
+            x: self.x.abs(),
+            y: self.y.abs(),
+        }
+    }
+
+    /// Returns the horizontal maximum of `self`.
+    ///
+    /// In other words this computes `max(x, y, ..)`.
+    #[inline]
+    pub fn max_element(self) -> i32 { self.x.max(self.y) }
 }
 
 impl std::ops::Add<(i32, i32)> for GridPoint {
@@ -17,6 +32,17 @@ impl std::ops::Add<(i32, i32)> for GridPoint {
         Self {
             x: self.x + rhs.0,
             y: self.y + rhs.1,
+        }
+    }
+}
+
+impl std::ops::Sub for GridPoint {
+    type Output = Self;
+
+    fn sub(self, rhs: Self) -> Self::Output {
+        Self {
+            x: self.x - rhs.x,
+            y: self.y - rhs.y,
         }
     }
 }

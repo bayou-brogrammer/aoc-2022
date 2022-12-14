@@ -87,8 +87,6 @@ fn part2(input: &str) -> String {
         .to_string()
 }
 
-
-
 pub struct DirectionIterator {
     size: (i32, i32),
     point: GridPoint,
@@ -122,15 +120,6 @@ impl Iterator for DirectionIterator {
         self.point = pt + coord;
 
         Some(self.point)
-    }
-}
-
-pub fn idx(pt: GridPoint, width: i32) -> usize { (pt.y * width + pt.x) as usize }
-
-pub fn idx_to_point(idx: usize, width: usize) -> GridPoint {
-    GridPoint {
-        x: (idx % width) as i32,
-        y: (idx / width) as i32,
     }
 }
 
